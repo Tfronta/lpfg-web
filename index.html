@@ -97,7 +97,7 @@ nav.nav--open .nav-menu-toggle .nav-icon-close { display:block; }
 .pi-photo img { width:100%; height:100%; object-fit:cover; object-position:center top; display:block; }
 .pi-name { font-family:'Inter',system-ui,sans-serif; font-size:1.05rem; font-weight:600; color:var(--blue); margin-bottom:0.35rem; letter-spacing:0.01em; line-height:1.4; padding-bottom:0.1em; }
 .pi-title { font-size:13px; font-weight:600; color:var(--teal); margin-bottom:1rem; line-height:1.45; }
-.pi-bio { font-size:13.5px; color:var(--gray); line-height:1.75; margin-bottom:1rem; }
+.pi-bio { font-size:13.5px; color:var(--gray); line-height:1.75; margin-bottom:1rem; text-align:justify; }
 .pi-links { font-size:12px; display:flex; flex-wrap:wrap; align-items:center; gap:6px; }
 .pi-links a { color:var(--blue); text-decoration:none; font-weight:600; }
 .pi-links a:hover { text-decoration:underline; }
@@ -111,7 +111,7 @@ section { padding:2rem 3rem; }
 .container { max-width:var(--content-max); width:100%; margin:0 auto; }
 .s-label { font-size:11px; font-weight:700; letter-spacing:0.13em; text-transform:uppercase; color:var(--blue); margin-bottom:0.5rem; }
 .s-title { font-family:var(--font-display); font-size:clamp(1.65rem,2.75vw,2.15rem); font-weight:700; color:var(--blue); line-height:1.28; margin-bottom:0.45rem; letter-spacing:-0.01em; padding-bottom:0; width:fit-content; max-width:100%; }
-.s-sub { font-size:14px; color:var(--gray); max-width:none; line-height:1.75; margin-bottom:1.5rem; margin-top:0.25rem; }
+.s-sub { font-size:14px; color:var(--gray); max-width:none; line-height:1.75; margin-bottom:1.5rem; margin-top:0.25rem; text-align:justify; }
 
 /* RESEARCH */
 #research { background:var(--gray-light); }
@@ -121,7 +121,7 @@ section { padding:2rem 3rem; }
 .r-icon { display:inline-flex; align-items:center; justify-content:center; margin-bottom:0.65rem; color:var(--teal); }
 .r-icon svg { width:26px; height:26px; stroke-width:1.85; }
 .r-card h3 { font-family:'Inter',system-ui,sans-serif; font-size:12.75px; font-weight:600; color:var(--ink); margin-bottom:0.4rem; line-height:1.42; padding-bottom:0.08em; letter-spacing:0.01em; }
-.r-card p { font-size:12.5px; color:var(--gray); line-height:1.65; word-break:normal; overflow-wrap:normal; }
+.r-card p { font-size:12.5px; color:var(--gray); line-height:1.65; word-break:normal; overflow-wrap:normal; text-align:justify; }
 .r-keywords { display:flex; flex-wrap:wrap; gap:6px; margin-top:0.75rem; }
 .r-keyword { font-size:10px; font-weight:600; letter-spacing:0.02em; padding:3px 8px; border-radius:5px; color:var(--gray); background:var(--gray-light); border:1px solid var(--border); }
 
@@ -169,7 +169,7 @@ section { padding:2rem 3rem; }
 .t-card-horizontal .t-photo { margin:0; }
 .t-card-body { display:flex; flex-direction:column; align-items:flex-start; min-width:0; flex:1; }
 .t-card-horizontal .t-role-badge { margin-bottom:0.4rem; }
-.t-research-topics { margin:0 0 0.55rem; font-size:0.8rem; line-height:1.55; color:var(--gray); }
+.t-research-topics { margin:0 0 0.55rem; font-size:0.8rem; line-height:1.55; color:var(--gray); text-align:justify; }
 .t-extra-link { font-size:11px; font-weight:600; color:var(--blue); }
 .t-extra-link:hover { text-decoration:underline; }
 
@@ -203,7 +203,7 @@ section { padding:2rem 3rem; }
 .p-card { background:white; border:1px solid var(--border); border-radius:12px; padding:1.35rem; padding-bottom:calc(1.35rem + 4px); transition:all 0.2s; display:flex; flex-direction:column; height:100%; min-height:0; }
 .p-card:hover { box-shadow:0 5px 20px rgba(0,52,113,0.07); transform:translateY(-2px); }
 .p-card h3 { font-family:'Inter',system-ui,sans-serif; font-size:12.75px; font-weight:600; color:var(--ink); margin-bottom:0.45rem; line-height:1.42; padding-bottom:0.08em; letter-spacing:0.01em; flex-shrink:0; }
-.p-card p { font-size:12.5px; color:var(--gray); line-height:1.65; word-break:normal; overflow-wrap:normal; flex:1 1 auto; margin:0; }
+.p-card p { font-size:12.5px; color:var(--gray); line-height:1.65; word-break:normal; overflow-wrap:normal; flex:1 1 auto; margin:0; text-align:justify; }
 .p-card p a { font-weight:600; color:var(--blue); text-decoration:none; }
 .p-card p a:hover { text-decoration:underline; opacity:0.8; }
 
@@ -221,7 +221,10 @@ section { padding:2rem 3rem; }
 #partnerships .s-title { color:white; }
 #partnerships .s-sub   { color:rgba(255,255,255,0.55); }
 #partnerships .s-label { color:#7EB3E0; }
-.grid-par { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:10px; }
+.partnerships-grid-stack { display:flex; flex-direction:column; gap:10px; }
+.grid-par { display:grid; gap:10px; }
+.grid-par--row6 { grid-template-columns:repeat(6,minmax(0,1fr)); }
+.grid-par--row5 { grid-template-columns:repeat(5,minmax(0,1fr)); }
 .par-card { background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.11); border-radius:11px; padding:0.9rem 0.75rem; transition:background 0.2s; }
 .par-card:hover { background:rgba(255,255,255,0.12); }
 .par-flag { font-size:1rem; margin-bottom:0.35rem; }
@@ -378,7 +381,7 @@ footer p { font-size:11.5px; color:rgba(255,255,255,0.4); }
   <div class="container">
   <div class="hero-main">
     <div class="hero-eyebrow" data-i18n="hero.eyebrow">Universidade de São Paulo · FMRP · FFCLRP</div>
-    <h1 class="hero-title"><span data-i18n="hero.title1">Laboratório de Pesquisas</span><br><span class="accent" data-i18n="hero.accent">Forenses e Genômica</span></h1>
+    <h1 class="hero-title"><span data-i18n="hero.title1">Laboratório de Pesquisas</span><br><span class="accent" data-i18n="hero.accent">Forenses e Genômicas</span></h1>
     <p class="hero-desc" data-i18n="hero.desc">Research group focused on Population Genetics, forensic identification markers, human pigmentation variation, and next-generation sequencing applied to forensic genomics.</p>
     <div class="hero-tags">
       <span class="tag" data-i18n="t1">Population Genetics</span>
@@ -472,18 +475,22 @@ footer p { font-size:11.5px; color:rgba(255,255,255,0.4); }
     <div class="s-label" data-i18n="pa.l">International Network</div>
     <h2 class="s-title" data-i18n="pa.t">Partnerships & Collaborations</h2>
     <p class="s-sub" data-i18n="pa.s">We collaborate with leading researchers and institutions in forensic genetics and genomics.</p>
-    <div class="grid-par">
+    <div class="partnerships-grid-stack">
+    <div class="grid-par grid-par--row6">
       <div class="par-card"><div class="par-flag">🇧🇷</div><h4>Molecular Genetics and Bioinformatics Lab · UNESP</h4><p>Dr. Erick C. Castelli · <a href="http://www.castelli-lab.net" target="_blank" rel="noopener noreferrer">castelli-lab.net</a></p></div>
       <div class="par-card"><div class="par-flag">🇧🇷</div><h4 data-i18n="pa10h">Laboratório de Genética Humana · Universidade de Brasília</h4><p data-i18n="pa10d">Dra. Silviene Fabiana de Oliveira</p></div>
       <div class="par-card"><div class="par-flag">🇧🇷</div><h4>Lab. Multiusuário de Biologia Molecular · FMRP/USP</h4><p>Dr. Eduardo A. Donadi</p></div>
       <div class="par-card"><div class="par-flag">🇧🇷</div><h4>Lab. de Genética Bioquímica · FMRP/USP</h4><p>Dr. Aguinaldo Luiz Simões</p></div>
       <div class="par-card"><div class="par-flag">🇧🇷</div><h4>Polícia Científica do Paraná</h4><p><span data-i18n="pa8">Active research collaboration (NGS forensic)</span> · Luciellen Davila Giacomel Kobachuk, Pedro Henrique Canezin, Marcelo Malaghini, Marianna Maia Taulois do Rosário</p></div>
-      <div class="par-card"><div class="par-flag">🇧🇷</div><h4>Polícia Federal do Brasil</h4><p data-i18n="pa9">Active research collaboration (NGS)</p></div>
+      <div class="par-card"><div class="par-flag">🇧🇷</div><h4>Polícia Federal do Brasil</h4><p data-i18n="pa9">Active collaboration (forensic NGS) · Ronaldo [surname TBC], Diana [surname TBC]</p></div>
+    </div>
+    <div class="grid-par grid-par--row5">
       <div class="par-card"><div class="par-flag">🇺🇸</div><h4><a href="https://jainlab.org" target="_blank" rel="noopener noreferrer">Miten Jain Lab · Northeastern University</a></h4><p>Dr. Miten Jain · <span data-i18n="pa.jain.sub">Long-read sequencing and genomics</span></p></div>
-      <div class="par-card"><div class="par-flag">🇨🇦</div><h4>Anthropology Department · University of Toronto at Mississauga</h4><p>Dr. Esteban J. Parra</p></div>
-      <div class="par-card"><div class="par-flag">🇺🇸</div><h4>Anthropology Department · University of Cincinnati</h4><p>Dr. Heather L. Norton</p></div>
-      <div class="par-card"><div class="par-flag">🇫🇷</div><h4>Institut de Recherche pour le Développement</h4><p>Dr. David Courtin, Dr. Audrey Sabbagh</p></div>
-      <div class="par-card"><div class="par-flag">🇫🇷</div><h4>Service de Recherches en Hémato-Immunologie</h4><p>Dr. Philippe Moreau</p></div>
+      <div class="par-card"><div class="par-flag">🇨🇦</div><h4 data-i18n="pa.parra.h">Dr. Esteban J. Parra · University of Toronto at Mississauga</h4><p data-i18n="pa.parra.sub">Anthropology Department</p></div>
+      <div class="par-card"><div class="par-flag">🇺🇸</div><h4 data-i18n="pa.norton.h">Dr. Heather L. Norton · University of Cincinnati</h4><p data-i18n="pa.norton.sub">Anthropology Department</p></div>
+      <div class="par-card"><div class="par-flag">🇫🇷</div><h4 data-i18n="pa.fr1h">Institut de Recherche pour le Développement (France)</h4><p>Dr. David Courtin, Dr. Audrey Sabbagh</p></div>
+      <div class="par-card"><div class="par-flag">🇫🇷</div><h4 data-i18n="pa.fr2h">Service de Recherches en Hémato-Immunologie (France)</h4><p>Dr. Philippe Moreau</p></div>
+    </div>
     </div>
   </div>
 </section>
@@ -494,7 +501,7 @@ footer p { font-size:11.5px; color:rgba(255,255,255,0.4); }
     <h2 class="s-title" data-i18n="eq.t">Equipment & Platforms</h2>
     <p class="s-sub" data-i18n="eq.s">Our lab is equipped for wet lab genomics and high-performance computational analysis.</p>
     <div class="grid-4">
-      <div class="eq-card"><div class="eq-accent" aria-hidden="true"></div><div class="eq-card-body"><h4 data-i18n="eq1t">Oxford Nanopore · PromethION</h4><p data-i18n="eq1d">Long-read sequencing on the PromethION platform for STR genotyping and whole-genome analysis.</p></div></div>
+      <div class="eq-card"><div class="eq-accent" aria-hidden="true"></div><div class="eq-card-body"><h4 data-i18n="eq1t">Oxford Nanopore · PromethION</h4><p data-i18n="eq1d">Long-read sequencing on the PromethION P2 Solo for STR genotyping and whole-genome analysis.</p></div></div>
       <div class="eq-card"><div class="eq-accent" aria-hidden="true"></div><div class="eq-card-body"><h4 data-i18n="eq2t">High-performance compute server</h4><p data-i18n="eq2d">Dedicated computational infrastructure for large-scale genomic data processing.</p></div></div>
       <div class="eq-card"><div class="eq-accent" aria-hidden="true"></div><div class="eq-card-body"><h4 data-i18n="eq3t">Molecular Biology</h4><p data-i18n="eq3d">DNA and RNA extraction and quantification, PCR amplification, and library preparation for sequencing.</p></div></div>
       <div class="eq-card"><div class="eq-accent" aria-hidden="true"></div><div class="eq-card-body"><h4 data-i18n="eq4t">Bioinformatics</h4><p data-i18n="eq4d">Custom pipelines for forensic genomics, population genomics, and massively parallel sequencing analysis.</p></div></div>
@@ -525,12 +532,19 @@ footer p { font-size:11.5px; color:rgba(255,255,255,0.4); }
         <div class="t-card"><div class="t-photo">TC</div><h4>Thássia Carratto</h4><span class="t-role-badge t-badge-doc" data-i18n="tm.br.doc_f">Doutoranda</span><div class="t-links"><a class="t-lattes" href="http://lattes.cnpq.br/3550382626398527" target="_blank" rel="noopener noreferrer" data-i18n="tm.lattes">Lattes</a><span class="t-link-sep" aria-hidden="true">·</span><a class="t-lattes" href="https://orcid.org/0000-0002-2272-5075" target="_blank" rel="noopener noreferrer" data-i18n="tm.orcid">ORCID</a><span class="t-link-sep" aria-hidden="true">·</span><a class="t-lattes" href="https://www.teses.usp.br/teses/disponiveis/59/59138/tde-16042020-140628/pt-br.php" target="_blank" rel="noopener noreferrer" data-i18n="thesis.msc">Mestrado</a></div></div>
         <div class="t-card"><div class="t-photo">VM</div><h4>Vítor M. S. Moraes</h4><span class="t-role-badge t-badge-doc" data-i18n="tm.br.doc_m">Doutorando</span><div class="t-links"><a class="t-lattes" href="http://lattes.cnpq.br/3679845447720969" target="_blank" rel="noopener noreferrer" data-i18n="tm.lattes">Lattes</a><span class="t-link-sep" aria-hidden="true">·</span><a class="t-lattes" href="https://orcid.org/0000-0002-1202-3985" target="_blank" rel="noopener noreferrer" data-i18n="tm.orcid">ORCID</a></div></div>
         <div class="t-card"><div class="t-photo">MF</div><h4>Matheus de Sousa Ferrari</h4><span class="t-role-badge t-badge-doc" data-i18n="tm.br.doc_m">Doutorando</span><a class="t-lattes" href="http://lattes.cnpq.br/7606109840250259" target="_blank" rel="noopener noreferrer" data-i18n="tm.lattes">Lattes</a></div>
-        <div class="t-card"><div class="t-photo">LS</div><h4>Luiza Rauen Sabbag</h4><span class="t-role-badge t-badge-msc" data-i18n="tm.br.ms_f">Mestranda</span><a class="t-lattes" href="http://lattes.cnpq.br/7640182402756585" target="_blank" rel="noopener noreferrer" data-i18n="tm.lattes">Lattes</a></div>
+        <div class="t-card"><div class="t-photo">LS</div><h4>Luiza Rauen Sabbag</h4><span class="t-role-badge t-badge-doc" data-i18n="tm.br.doc_f">Doutoranda</span><a class="t-lattes" href="http://lattes.cnpq.br/7640182402756585" target="_blank" rel="noopener noreferrer" data-i18n="tm.lattes">Lattes</a></div>
         <div class="t-card"><div class="t-photo">CDN</div><h4>Carlos D. Nascimento</h4><span class="t-role-badge t-badge-msc" data-i18n="tm.br.ms_m">Mestrando</span><a class="t-lattes" href="http://lattes.cnpq.br/6312680968175749" target="_blank" rel="noopener noreferrer" data-i18n="tm.lattes">Lattes</a></div>
-        <div class="t-card"><div class="t-photo">PL</div><h4>Pedro Laprega</h4><span class="t-role-badge t-badge-msc" data-i18n="tm.br.ms_m">Mestrando</span><span class="t-co-note" data-i18n="tm.co_supervision">Co-orientação LPFG</span><a class="t-lattes" href="http://lattes.cnpq.br/3955700045202811" target="_blank" rel="noopener noreferrer" data-i18n="tm.lattes">Lattes</a></div>
         <div class="t-card"><div class="t-photo">CE</div><h4>Carlos Eduardo</h4><span class="t-role-badge t-badge-ms" data-i18n="al.track.ic">Iniciação científica</span><span class="t-lattes" data-i18n="tm.lattes.pending">Lattes em breve</span></div>
         <div class="t-card"><div class="t-photo">GC</div><h4>Gustavo Capelloto</h4><span class="t-role-badge t-badge-msc" data-i18n="tm.br.ms_m">Mestrando</span><span class="t-lattes" data-i18n="tm.lattes.pending">Lattes em breve</span></div>
         <div class="t-card"><div class="t-photo">PC</div><h4>Pedro Canezin</h4><span class="t-role-badge t-badge-doc" data-i18n="tm.br.doc_m">Doutorando</span><span class="t-lattes" data-i18n="tm.lattes.pending">Lattes em breve</span></div>
+      </div>
+    </div>
+    <div class="team-group">
+      <h3 class="team-group-title" data-i18n="tm.group.cosupervisions">CO-ORIENTAÇÕES</h3>
+      <div class="team-grid">
+        <div class="t-card"><div class="t-photo">PL</div><h4>Pedro Laprega</h4><span class="t-role-badge t-badge-msc" data-i18n="tm.br.ms_m">Mestrando</span><span class="t-co-note" data-i18n="tm.co_supervision">Co-orientação LPFG</span><a class="t-lattes" href="http://lattes.cnpq.br/3955700045202811" target="_blank" rel="noopener noreferrer" data-i18n="tm.lattes">Lattes</a></div>
+        <div class="t-card"><div class="t-photo">SA</div><h4>Samyra</h4><span class="t-role-badge t-badge-doc" data-i18n="tm.br.doc_f">Doutoranda</span><span class="t-co-note" data-i18n="tm.co_supervision">Co-orientação LPFG</span><span class="t-lattes" data-i18n="tm.lattes.pending">Lattes em breve</span></div>
+        <div class="t-card"><div class="t-photo">DI</div><h4>Diana</h4><span class="t-role-badge t-badge-doc" data-i18n="tm.br.doc_f">Doutoranda</span><span class="t-co-note" data-i18n="tm.co_supervision">Co-orientação LPFG</span><span class="t-lattes" data-i18n="tm.lattes.pending">Lattes em breve</span></div>
       </div>
     </div>
   </div>
@@ -544,29 +558,29 @@ footer p { font-size:11.5px; color:rgba(255,255,255,0.4); }
     <div class="alumni-grid">
       <div class="a-card"><div class="a-name">Dr. Alison Luis Eburneo Pereira</div><span class="a-track">Mestrado · Doutorado</span><a class="a-link" data-i18n="tm.lattes" href="http://lattes.cnpq.br/6195606840084614" target="_blank" rel="noopener noreferrer">Lattes</a></div>
       <div class="a-card"><div class="a-name">MSc. Amanda B. Candelária</div><span class="a-track">Mestrado</span><a class="a-link" data-i18n="tm.lattes" href="http://lattes.cnpq.br/4394791160368140" target="_blank" rel="noopener noreferrer">Lattes</a></div>
-      <div class="a-card"><div class="a-name">Ana Clara</div><span class="a-track">IC</span><span class="a-link" data-i18n="tm.lattes.pending">Lattes em breve</span></div>
-      <div class="a-card"><div class="a-name">Arthur S. L. Ferreira</div><span class="a-track">IC</span><a class="a-link" data-i18n="tm.lattes" href="http://lattes.cnpq.br/2843039945067244" target="_blank" rel="noopener noreferrer">Lattes</a></div>
-      <div class="a-card"><div class="a-name">Dra. Camila L. L. da Silva</div><span class="a-track">IC</span><a class="a-link" data-i18n="tm.lattes" href="http://lattes.cnpq.br/1236305046892900" target="_blank" rel="noopener noreferrer">Lattes</a></div>
-      <div class="a-card"><div class="a-name">Carolina Poloni Guilherme</div><span class="a-track">IC</span><a class="a-link" data-i18n="tm.lattes" href="http://lattes.cnpq.br/7076828823879816" target="_blank" rel="noopener noreferrer">Lattes</a></div>
-      <div class="a-card"><div class="a-name">Dimitry R. Higashie Sinmon</div><span class="a-track">IC</span><a class="a-link" data-i18n="tm.lattes" href="http://lattes.cnpq.br/3113250307381461" target="_blank" rel="noopener noreferrer">Lattes</a></div>
+      <div class="a-card"><div class="a-name">Ana Clara</div><span class="a-track" data-i18n="al.track.ic">Iniciação Científica</span><span class="a-link" data-i18n="tm.lattes.pending">Lattes em breve</span></div>
+      <div class="a-card"><div class="a-name">Arthur S. L. Ferreira</div><span class="a-track" data-i18n="al.track.ic">Iniciação Científica</span><a class="a-link" data-i18n="tm.lattes" href="http://lattes.cnpq.br/2843039945067244" target="_blank" rel="noopener noreferrer">Lattes</a></div>
+      <div class="a-card"><div class="a-name">Dra. Camila L. L. da Silva</div><span class="a-track" data-i18n="al.track.ic">Iniciação Científica</span><a class="a-link" data-i18n="tm.lattes" href="http://lattes.cnpq.br/1236305046892900" target="_blank" rel="noopener noreferrer">Lattes</a></div>
+      <div class="a-card"><div class="a-name">Carolina Poloni Guilherme</div><span class="a-track" data-i18n="al.track.ic">Iniciação Científica</span><a class="a-link" data-i18n="tm.lattes" href="http://lattes.cnpq.br/7076828823879816" target="_blank" rel="noopener noreferrer">Lattes</a></div>
+      <div class="a-card"><div class="a-name">Dimitry R. Higashie Sinmon</div><span class="a-track" data-i18n="al.track.ic">Iniciação Científica</span><a class="a-link" data-i18n="tm.lattes" href="http://lattes.cnpq.br/3113250307381461" target="_blank" rel="noopener noreferrer">Lattes</a></div>
       <div class="a-card"><div class="a-name">Dra. Edilene Santos de Andrade</div><span class="a-track">Doutorado · Pós-doutorado</span><a class="a-link" data-i18n="tm.lattes" href="http://lattes.cnpq.br/1809427148933234" target="_blank" rel="noopener noreferrer">Lattes</a></div>
-      <div class="a-card"><div class="a-name">Flávia Djenane Nunes de Souza</div><span class="a-track">IC</span><a class="a-link" data-i18n="tm.lattes" href="http://lattes.cnpq.br/1135565500882768" target="_blank" rel="noopener noreferrer">Lattes</a></div>
-      <div class="a-card"><div class="a-name">Flávio Kaoru N. Cirilo</div><span class="a-track">IC</span><a class="a-link" data-i18n="tm.lattes" href="http://lattes.cnpq.br/1591349501063645" target="_blank" rel="noopener noreferrer">Lattes</a></div>
+      <div class="a-card"><div class="a-name">Flávia Djenane Nunes de Souza</div><span class="a-track" data-i18n="al.track.ic">Iniciação Científica</span><a class="a-link" data-i18n="tm.lattes" href="http://lattes.cnpq.br/1135565500882768" target="_blank" rel="noopener noreferrer">Lattes</a></div>
+      <div class="a-card"><div class="a-name">Flávio Kaoru N. Cirilo</div><span class="a-track" data-i18n="al.track.ic">Iniciação Científica</span><a class="a-link" data-i18n="tm.lattes" href="http://lattes.cnpq.br/1591349501063645" target="_blank" rel="noopener noreferrer">Lattes</a></div>
       <div class="a-card"><div class="a-name">Dr. Guilherme Debortoli</div><span class="a-track">Doutorado</span><a class="a-link" data-i18n="tm.lattes" href="http://lattes.cnpq.br/5235787055546545" target="_blank" rel="noopener noreferrer">Lattes</a></div>
-      <div class="a-card"><div class="a-name">Guilherme Pedrosa</div><span class="a-track">IC</span><span class="a-link" data-i18n="tm.lattes.pending">Lattes em breve</span></div>
-      <div class="a-card"><div class="a-name">MSc. Guilherme V. Silva</div><span class="a-track">IC · Mestrado</span><a class="a-link" data-i18n="tm.lattes" href="http://lattes.cnpq.br/4807421359199420" target="_blank" rel="noopener noreferrer">Lattes</a></div>
-      <div class="a-card"><div class="a-name">Hiago Ferreira</div><span class="a-track">IC · Mestrado</span><span class="a-link" data-i18n="tm.lattes.pending">Lattes em breve</span></div>
-      <div class="a-card"><div class="a-name">MSc. Igor C. D. Alcarás</div><span class="a-track">IC</span><a class="a-link" data-i18n="tm.lattes" href="http://lattes.cnpq.br/7565130810910778" target="_blank" rel="noopener noreferrer">Lattes</a></div>
-      <div class="a-card"><div class="a-name">Dra. Letícia Marcorin</div><span class="a-track">IC · Mestrado · Doutorado</span><a class="a-link" data-i18n="tm.lattes" href="http://lattes.cnpq.br/7093586840803326" target="_blank" rel="noopener noreferrer">Lattes</a></div>
-      <div class="a-card"><div class="a-name">Lídia Renata Zanão</div><span class="a-track">IC</span><a class="a-link" data-i18n="tm.lattes" href="http://lattes.cnpq.br/4252745694850515" target="_blank" rel="noopener noreferrer">Lattes</a></div>
+      <div class="a-card"><div class="a-name">Guilherme Pedrosa</div><span class="a-track" data-i18n="al.track.ic">Iniciação Científica</span><span class="a-link" data-i18n="tm.lattes.pending">Lattes em breve</span></div>
+      <div class="a-card"><div class="a-name">MSc. Guilherme V. Silva</div><span class="a-track" data-i18n="al.track.ic_ms">Iniciação Científica · Mestrado</span><a class="a-link" data-i18n="tm.lattes" href="http://lattes.cnpq.br/4807421359199420" target="_blank" rel="noopener noreferrer">Lattes</a></div>
+      <div class="a-card"><div class="a-name">Hiago Ferreira</div><span class="a-track" data-i18n="al.track.ic_ms">Iniciação Científica · Mestrado</span><span class="a-link" data-i18n="tm.lattes.pending">Lattes em breve</span></div>
+      <div class="a-card"><div class="a-name">MSc. Igor C. D. Alcarás</div><span class="a-track" data-i18n="al.track.ic">Iniciação Científica</span><a class="a-link" data-i18n="tm.lattes" href="http://lattes.cnpq.br/7565130810910778" target="_blank" rel="noopener noreferrer">Lattes</a></div>
+      <div class="a-card"><div class="a-name">Dra. Letícia Marcorin</div><span class="a-track" data-i18n="al.track.ic_ms_phd">Iniciação Científica · Mestrado · Doutorado</span><a class="a-link" data-i18n="tm.lattes" href="http://lattes.cnpq.br/7093586840803326" target="_blank" rel="noopener noreferrer">Lattes</a></div>
+      <div class="a-card"><div class="a-name">Lídia Renata Zanão</div><span class="a-track" data-i18n="al.track.ic">Iniciação Científica</span><a class="a-link" data-i18n="tm.lattes" href="http://lattes.cnpq.br/4252745694850515" target="_blank" rel="noopener noreferrer">Lattes</a></div>
       <div class="a-card"><div class="a-name">Dr. Leonardo Arduino Marano</div><span class="a-track">Mestrado · Doutorado</span><a class="a-link" data-i18n="tm.lattes" href="http://lattes.cnpq.br/0589489325222038" target="_blank" rel="noopener noreferrer">Lattes</a></div>
       <div class="a-card"><div class="a-name">Dra. Luciana Caricati Veiga Castelli</div><span class="a-track">Pós-doutorado</span><a class="a-link" data-i18n="tm.lattes" href="http://lattes.cnpq.br/8331568252393187" target="_blank" rel="noopener noreferrer">Lattes</a></div>
       <div class="a-card"><div class="a-name">Dra. Luciellen D Avila Giacomel Kobachuk</div><span class="a-track">Doutorado</span><a class="a-link" data-i18n="tm.lattes" href="http://lattes.cnpq.br/0456115403472820" target="_blank" rel="noopener noreferrer">Lattes</a></div>
       <div class="a-card"><div class="a-name">Maria Luiza Guimarães de Oliveira</div><span class="a-track">Doutorado</span><div class="a-links"><a class="a-link" data-i18n="tm.lattes" href="http://lattes.cnpq.br/1710078127635457" target="_blank" rel="noopener noreferrer">Lattes</a><span class="t-link-sep" aria-hidden="true">·</span><a class="a-link" data-i18n="tm.orcid" href="https://orcid.org/0000-0002-8830-1267" target="_blank" rel="noopener noreferrer">ORCID</a></div></div>
-      <div class="a-card"><div class="a-name">Matheus S. da Silva</div><span class="a-track">IC</span><a class="a-link" data-i18n="tm.lattes" href="http://lattes.cnpq.br/0296703197770132" target="_blank" rel="noopener noreferrer">Lattes</a></div>
+      <div class="a-card"><div class="a-name">Matheus S. da Silva</div><span class="a-track" data-i18n="al.track.ic">Iniciação Científica</span><a class="a-link" data-i18n="tm.lattes" href="http://lattes.cnpq.br/0296703197770132" target="_blank" rel="noopener noreferrer">Lattes</a></div>
       <div class="a-card"><div class="a-name">Dra. Nádia C. A. Fracasso</div><span class="a-track">Mestrado · Doutorado</span><a class="a-link" data-i18n="tm.lattes" href="http://lattes.cnpq.br/7175223103129160" target="_blank" rel="noopener noreferrer">Lattes</a></div>
       <div class="a-card"><div class="a-name">Dra. Nathalia Joanne Bispo Cezar</div><span class="a-track">Doutorado</span><a class="a-link" data-i18n="tm.lattes" href="http://lattes.cnpq.br/2375505392612916" target="_blank" rel="noopener noreferrer">Lattes</a></div>
-      <div class="a-card"><div class="a-name">MSc. Paulo S. Strazza Jr</div><span class="a-track">IC</span><a class="a-link" data-i18n="tm.lattes" href="http://lattes.cnpq.br/1022768535795196" target="_blank" rel="noopener noreferrer">Lattes</a></div>
+      <div class="a-card"><div class="a-name">MSc. Paulo S. Strazza Jr</div><span class="a-track" data-i18n="al.track.ic">Iniciação Científica</span><a class="a-link" data-i18n="tm.lattes" href="http://lattes.cnpq.br/1022768535795196" target="_blank" rel="noopener noreferrer">Lattes</a></div>
       <div class="a-card"><div class="a-name">Dr. Rafael S. Albuquerque</div><span class="a-track">Doutorado</span><a class="a-link" data-i18n="tm.lattes" href="http://lattes.cnpq.br/1409779330238448" target="_blank" rel="noopener noreferrer">Lattes</a></div>
     </div>
   </div>
@@ -658,26 +672,57 @@ i18n.en.pj3d='Identification and validation of markers related to differential g
 i18n.pt.pj3d='Identificação e validação de marcadores relacionados ao processo de expressão gênica diferencial em fluidos e tecidos de interesse forense.';
 i18n.es.pj3d='Identificación y validación de marcadores relacionados con el proceso de expresión génica diferencial en fluidos y tejidos de interés forense.';
 i18n.es['hero.title1']='Laboratorio de Investigaciones Forenses y';
-i18n.es['hero.accent']='Genómica';
+i18n.pt['hero.accent']='Forenses e Genômicas';
+i18n.es['hero.accent']='Genómicas';
 // Partnerships text override (EN/PT/ES)
-i18n.en.pa9='Active research collaboration (NGS)';
-i18n.pt.pa9='Colaboração de pesquisa ativa (NGS)';
-i18n.es.pa9='Colaboración de investigación activa (NGS)';
+i18n.en.pa9='Active collaboration (forensic NGS) · Ronaldo [surname TBC], Diana [surname TBC]';
+i18n.pt.pa9='Colaboração ativa (NGS forense) · Ronaldo [sobrenome a confirmar], Diana [sobrenome a confirmar]';
+i18n.es.pa9='Colaboración activa (NGS forense) · Ronaldo [apellido pendiente], Diana [apellido pendiente]';
+i18n.en['pa.parra.h']='Dr. Esteban J. Parra · University of Toronto at Mississauga';
+i18n.pt['pa.parra.h']='Dr. Esteban J. Parra · University of Toronto at Mississauga';
+i18n.es['pa.parra.h']='Dr. Esteban J. Parra · University of Toronto at Mississauga';
+i18n.en['pa.parra.sub']='Anthropology Department';
+i18n.pt['pa.parra.sub']='Departamento de Antropologia';
+i18n.es['pa.parra.sub']='Departamento de Antropología';
+i18n.en['pa.norton.h']='Dr. Heather L. Norton · University of Cincinnati';
+i18n.pt['pa.norton.h']='Dr. Heather L. Norton · University of Cincinnati';
+i18n.es['pa.norton.h']='Dra. Heather L. Norton · University of Cincinnati';
+i18n.en['pa.norton.sub']='Anthropology Department';
+i18n.pt['pa.norton.sub']='Departamento de Antropologia';
+i18n.es['pa.norton.sub']='Departamento de Antropología';
+i18n.en['pa.fr1h']='Institut de Recherche pour le Développement (France)';
+i18n.pt['pa.fr1h']='Institut de Recherche pour le Développement (França)';
+i18n.es['pa.fr1h']='Institut de Recherche pour le Développement (Francia)';
+i18n.en['pa.fr2h']='Service de Recherches en Hémato-Immunologie (France)';
+i18n.pt['pa.fr2h']='Service de Recherches en Hémato-Immunologie (França)';
+i18n.es['pa.fr2h']='Service de Recherches en Hémato-Immunologie (Francia)';
 i18n.en.pa10h='Human Genetics Laboratory · University of Brasília';
 i18n.pt.pa10h='Laboratório de Genética Humana · Universidade de Brasília';
 i18n.es.pa10h='Laboratorio de Genética Humana · Universidad de Brasília';
 i18n.en.pa10d='Dra. Silviene Fabiana de Oliveira';
 i18n.pt.pa10d='Dra. Silviene Fabiana de Oliveira';
 i18n.es.pa10d='Dra. Silviene Fabiana de Oliveira';
+i18n.en['al.track.ic']='Undergraduate Research';
+i18n.pt['al.track.ic']='Iniciação Científica';
+i18n.es['al.track.ic']='Iniciación Científica';
+i18n.en['al.track.ic_ms']='Undergraduate Research · MSc';
+i18n.pt['al.track.ic_ms']='Iniciação Científica · Mestrado';
+i18n.es['al.track.ic_ms']='Iniciación Científica · Maestría';
+i18n.en['al.track.ic_ms_phd']='Undergraduate Research · MSc · PhD';
+i18n.pt['al.track.ic_ms_phd']='Iniciação Científica · Mestrado · Doutorado';
+i18n.es['al.track.ic_ms_phd']='Iniciación Científica · Maestría · Doctorado';
 i18n.en['tm.co_supervision']='LPFG co-supervision';
 i18n.pt['tm.co_supervision']='Co-orientação LPFG';
 i18n.es['tm.co_supervision']='Co-dirección LPFG';
 i18n.en['tm.group.techsupport']='Technical support';
 i18n.pt['tm.group.techsupport']='Apoio técnico';
 i18n.es['tm.group.techsupport']='Apoyo técnico';
-i18n.en.eq1d='Long-read sequencing on the PromethION platform for STR genotyping and whole-genome analysis.';
-i18n.pt.eq1d='Sequenciamento long-read no PromethION para genotipagem de STRs e análise de genomas completos.';
-i18n.es.eq1d='Secuenciación long-read en la plataforma PromethION para genotipado de STRs y análisis de genomas completos.';
+i18n.en['tm.group.cosupervisions']='Co-supervisions';
+i18n.pt['tm.group.cosupervisions']='Co-orientações';
+i18n.es['tm.group.cosupervisions']='Co-orientaciones';
+i18n.en.eq1d='Long-read sequencing on the PromethION P2 Solo for STR genotyping and whole-genome analysis.';
+i18n.pt.eq1d='Sequenciamento long-read no PromethION P2 Solo para genotipagem de STRs e análise de genomas completos.';
+i18n.es.eq1d='Secuenciación long-read en el PromethION P2 Solo para genotipado de STRs y análisis de genomas completos.';
 i18n.en.eq3d='DNA and RNA extraction and quantification, PCR amplification, and library preparation for sequencing.';
 i18n.pt.eq3d='Extração e quantificação de DNA e RNA, amplificação por PCR e preparo de bibliotecas para sequenciamento.';
 i18n.es.eq3d='Extracción y cuantificación de ADN y ARN, amplificación por PCR y preparación de bibliotecas para secuenciación.';
