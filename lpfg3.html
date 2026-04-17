@@ -145,13 +145,20 @@ section { padding:2rem 3rem; }
   overflow:hidden; box-sizing:border-box; line-height:1.2; flex-shrink:0;
 }
 .t-photo img { width:100%; height:100%; object-fit:cover; }
-.t-card h4 { font-family:'Inter',system-ui,sans-serif; font-size:12.5px; font-weight:600; color:var(--ink); margin-bottom:0.4rem; line-height:1.35; letter-spacing:0.01em; flex-shrink:0; }
+.t-card h4 {
+  font-family:'Inter',system-ui,sans-serif; font-size:12.5px; font-weight:600; color:var(--ink);
+  margin-bottom:0.4rem; line-height:1.35; letter-spacing:0.01em; flex-shrink:0;
+  display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2; line-clamp:2; overflow:hidden;
+  text-overflow:ellipsis; overflow-wrap:break-word; width:100%; max-width:100%; box-sizing:border-box;
+  min-height:calc(2 * 1.35em); max-height:calc(2 * 1.35em);
+}
 .t-role-badge {
   display:inline-block; font-size:9.5px; font-weight:700; letter-spacing:0.02em;
   padding:4px 9px; border-radius:20px; margin-bottom:0.45rem; line-height:1.25; max-width:100%;
 }
 .t-badge-postdoc { background:#e8f0fa; color:#003471; }
 .t-badge-doc { background:#e1f5ee; color:#0F6E56; }
+.t-badge-ic { background:transparent; color:var(--ink); border:1px solid #d1d5db; }
 .t-badge-msc { background:#fef3c7; color:#92400e; }
 .t-badge-tech { background:#f3f4f6; color:#374151; }
 .t-links { margin-top:auto; padding-top:0.35rem; display:flex; gap:8px; flex-wrap:wrap; justify-content:center; }
@@ -539,7 +546,7 @@ footer p { font-size:11.5px; color:rgba(255,255,255,0.4); }
         <div class="t-card"><div class="t-photo">MF</div><h4>Matheus de Sousa Ferrari</h4><span class="t-role-badge t-badge-doc" data-i18n="tm.br.doc_m">Doutorando</span><div class="t-links"><a class="t-lattes" href="http://lattes.cnpq.br/7606109840250259" target="_blank" rel="noopener noreferrer" data-i18n="tm.lattes">Lattes</a><span class="t-link-sep" aria-hidden="true">·</span><a class="t-lattes" href="https://www.teses.usp.br/teses/disponiveis/59/59138/tde-29102024-114430/pt-br.html" target="_blank" rel="noopener noreferrer" data-i18n="thesis.msc">Mestrado</a></div></div>
         <div class="t-card"><div class="t-photo">LS</div><h4>Luiza Rauen Sabbag</h4><span class="t-role-badge t-badge-doc" data-i18n="tm.br.doc_f">Doutoranda</span><a class="t-lattes" href="http://lattes.cnpq.br/7640182402756585" target="_blank" rel="noopener noreferrer" data-i18n="tm.lattes">Lattes</a></div>
         <div class="t-card"><div class="t-photo">CDN</div><h4>Carlos D. Nascimento</h4><span class="t-role-badge t-badge-msc" data-i18n="tm.br.ms_m">Mestrando</span><a class="t-lattes" href="http://lattes.cnpq.br/6312680968175749" target="_blank" rel="noopener noreferrer" data-i18n="tm.lattes">Lattes</a></div>
-        <div class="t-card"><div class="t-photo">CE</div><h4>Carlos Eduardo Muramoto</h4><span class="t-role-badge t-badge-ms" data-i18n="al.track.ic">Iniciação científica</span></div>
+        <div class="t-card"><div class="t-photo">CE</div><h4>Carlos Eduardo Muramoto</h4><span class="t-role-badge t-badge-ic" data-i18n="al.track.ic">Iniciação científica</span></div>
         <div class="t-card"><div class="t-photo">GC</div><h4>Gustavo Capelloto</h4><span class="t-role-badge t-badge-msc" data-i18n="tm.br.ms_m">Mestrando</span></div>
         <div class="t-card"><div class="t-photo">PC</div><h4>Pedro Canezin</h4><span class="t-role-badge t-badge-doc" data-i18n="tm.br.doc_m">Doutorando</span></div>
       </div>
